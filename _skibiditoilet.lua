@@ -1,3 +1,47 @@
+--[[ !! READ BEFORE USING !!
+	This script requires an app that can run multiple Roblox windows at once, like 'Roblox Account Manager'
+	This is because it's designed to work on multiple bot accounts.
+	
+	To use this script, first set the OWNER variable below. This tells the script who to listen to for commands.
+]]
+local OWNER="YOURNAMEHERE" -- SET THIS VARIABLE!
+--[[
+	Then, inject this script into all of your Roblox windows. An injector like JJSploit does this really well!
+	And that's it! You can add as many bot accounts as you want. The rest here is just a list of commands, which work on all bots at once:
+	
+	exit: This stops the script entirely
+	kill: Off by default. This turns "targeting" on, which forces the bots to always target the player with the lowest health, overriding all other targeting commands.
+	die: This just turns "targeting" off.
+	conflict: On by default. This allows the bots to attack eachother if you specifically tell them to.
+	peace: Stops bots from attacking each other.
+	defend: On by default. Causes the bots to follow you, while enabling "defend" mode, where they attack the last player that attacks you.
+	stop: Like defend, but disables "defend" mode, keeping their target instead of changing it if someone attacks you.
+	attack: Causes the bots to attack the nearest player to you.
+	attack 'player': Causes the bots to attack the player you specify. This is not case-sensitive, and autocompletes the player's name (you can type 'attack rObLoX' to attack 'robloxnoob' if you wanted to)
+	attack dummy: Causes the bots to attack the dummy, rather than a player.
+	jump: The exact same as all the attack commands, except the bots teleport to the player before attacking.
+	reset: Causes all the bots to die immediately. May not always work if they're being actively attacked.
+	explode: Same as reset, but flings the bots upward.
+	fling: Causes the bots to constantly fling you.
+	fling 'player': Causes the bots to fling the player.
+	dance: Causes the bots to do the '/e dance'. You can say 'stop' or 'defend' to stop this.
+	go: If "targeting" mode is on, the bots lead you to the player with the lowest health. Otherwise this does nothing.
+	go 'player': Causes the bots to lead you to the player you specify.
+	spam: Causes the bots to backshot you. Yes.
+	spam 'player': Causes the bots to backshot the player.
+	up: Causes the bots to push you upwards quickly. Useful for climbing mountains.
+	up 'player': Causes the bots to push the player upwards quickly.
+	come: Makes it so that the bots follows you closely.
+	flee: Makes it so that the bots follow you from far away.
+	
+	Commands aren't case-sensitive, and you can put them in a single chat message separated by commas. For example:
+	"come, kill, attack" makes the bots follow you closely, switch to targeting mode, and attack the player with the lowest health
+	
+	I know it's long, but I mean it's fun so yeah
+	
+	This script was made by "axes (@BHY94)"
+]]
+
 function getRoot(name)
 	if name and game.Players:FindFirstChild(name) then
 		if game.Players:FindFirstChild(name).Character then
@@ -8,7 +52,6 @@ function getRoot(name)
 		end
 	end
 end
-local OWNER="topologystupid"
 local PLAYER=OWNER
 
 local player=game.Players.LocalPlayer
