@@ -3,8 +3,13 @@
 	This is because it's designed to work on multiple bot accounts.
 	
 	To use this script, first set the OWNER variable below. This tells the script who to listen to for commands.
+	Then add the bots' and safe players' names to the OK array. This disables the bots from automatically targeting them.
 ]]
-local OWNER="YOURNAMEHERE" -- SET THIS VARIABLE!
+local OWNER="YOURNAMEHERE"
+local OK=[
+	"bot_123456",
+	"bot_676789"
+] -- You can add more!
 --[[
 	Then, inject this script into all of your Roblox windows. An injector like JJSploit does this really well!
 	And that's it! You can add as many bot accounts as you want. The rest here is just a list of commands, which work on all bots at once:
@@ -60,7 +65,10 @@ local character=player.Character
 local humanoid=character:WaitForChild("Humanoid")
 local root=character:WaitForChild("HumanoidRootPart")
 function okay(name)
-	if name==player.Name or name=="topologystupid" or name=="topologysmart" or name=="bot_23232378" or name=="bot_239476" or name=="bot_23232535w" or name=="bot_1029746" or name=="BHY94" then return false end
+	if name==player.Name return false end
+	for _,n in ipairs(OK) do
+		if n==name then return false end
+	end
 	return true
 end
 
