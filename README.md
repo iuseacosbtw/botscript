@@ -1,4 +1,4 @@
-![Download](https://img.shields.io/github/v/release/iuseacosbtw/botscript)
+[![Download zip](https://custom-icon-badges.herokuapp.com/badge/-Download-blue?style=for-the-badge&logo=download&logoColor=white "Download")](https://github.com/iuseacosbtw/botscript/releases/download/v1.0.0/botscript.lua)
 
 Details on how to use the script are in the script itself.
 
