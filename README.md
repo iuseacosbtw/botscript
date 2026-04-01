@@ -1,3 +1,5 @@
+![Download](https://img.shields.io/github/v/release/iuseacosbtw/botscript)
+
 Details on how to use the script are in the script itself.
 
 I HIGHLY recommend using [Roblox Account Manager](https://github.com/ic3w0lf22/Roblox-Account-Manager) and [JJSploit](https://wearedevs.net/d/JJSploit) to run this script. It's the setup I personally use, and they just work really well together.
