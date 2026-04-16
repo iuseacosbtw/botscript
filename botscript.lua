@@ -97,7 +97,7 @@ local character=player.Character
 local humanoid=character:WaitForChild("Humanoid")
 local root=character:WaitForChild("HumanoidRootPart")
 function okay(name)
-	if name==player.Name or name==OWNER return false end
+	if name==player.Name or name==OWNER then return false end
 	for _,n in ipairs(OK) do
 		if n==name then return false end
 	end
